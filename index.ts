@@ -49,7 +49,27 @@ async function main (){
     // const articles = await prisma.article.findMany()
     // // console.log(user)
     // console.log(articles)
+    // users.forEach((user)=> {
+    //     console.log(`User: ${user.name}, Email: ${user.email}`)
+    //     console.log(`Article:`)
+    //     user.articles.forEach((article)=>{
+    //         console.log(`-Title: ${article.title}, Body: ${article.body}`)
+    //     })
+    //     console.log('\n')
+    // });
+
+    //update
+    const user = await prisma.user.update({
+        where:{
+            id:1
+        },
+        data:{
+            name:"Hydra Vic"
+        }
+    })
 }
+
+
 
 main()
     .then(async ()=>{
